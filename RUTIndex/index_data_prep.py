@@ -20,5 +20,4 @@ df_multiplier=future_week.div(current_week)
 print ("Multiplier", df_multiplier.High)
 
 
-
 df_multiplier.to_csv("C:\\Users\\csvai\\OneDrive\\Desktop\\Stephen\\RUTIndex\\data\\RUT_30_years_high_multiplier.csv",columns=['High'] ,index=False, header=True)

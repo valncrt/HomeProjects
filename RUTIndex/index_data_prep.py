@@ -16,7 +16,7 @@ future_week=df.loc[weeks_look_back:,"High"].reset_index()
 print("Current WeeK",current_week[:])
 print("Future Week",future_week)
 df_multiplier=future_week.div(current_week)
-
+df_multiplier=df_multiplier.round(2)
 print ("Multiplier", df_multiplier.High)
 
 

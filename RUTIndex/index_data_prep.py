@@ -3,8 +3,13 @@ import pandas as pd
 weeks_look_back=10
 
 #file="C:\\Users\\csvai\\OneDrive\\Desktop\\Stephen\\RUTIndex\\data\\RUT_test.txt"
-file="C:\\Users\\csvai\\OneDrive\\Desktop\\Stephen\\RUTIndex\\data\\RUT_30_years.csv"
-df = pd.read_csv(file)
+input_file="C:\\Users\\csvai\\OneDrive\\Desktop\\Stephen\\RUTIndex\\data\\RUT_30_years.csv"
+output_file="C:\\Users\\csvai\\OneDrive\\Desktop\\Stephen\\RUTIndex\\data\\RUT_30_years_high_multiplier.csv"
+
+def get_out_file(output_file):
+    return output_file
+
+df = pd.read_csv(input_file)
 total_num_weeks=df.shape[0]
 
 print("dataframe shape",df.shape,df.shape[0])
@@ -21,4 +26,4 @@ print ("Multiplier", df_multiplier.High)
 
 
 
-df_multiplier.to_csv("C:\\Users\\csvai\\OneDrive\\Desktop\\Stephen\\RUTIndex\\data\\RUT_30_years_high_multiplier.csv",columns=['High'] ,index=False, header=True)
+df_multiplier.to_csv(output_file,columns=['High'] ,index=False, header=True)
